@@ -22,7 +22,7 @@ fs.createReadStream('Показания.csv')
 
         // Перебор полученного массива обьектов
         for (let i = 0; i < results.length; i++) {
-    
+
             // Заполнение массива для записи
             records.push(
                 {
@@ -67,7 +67,6 @@ fs.createReadStream('Показания.csv')
                 }
 
                 // Проверка равенства показателей
-                console.log(aprilToMayOfFlat, mayToJuneOfFlat, records[i].aprilToMay, records[i].mayToJune)
                 if (aprilToMayOfFlat == records[i].aprilToMay && mayToJuneOfFlat == records[i].mayToJune) {
                     records[i].isTrue = 'Верны'
                 } else {
